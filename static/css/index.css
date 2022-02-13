@@ -39,3 +39,21 @@ span {
     background-color: #C0A080;
     padding: 1%;
 }
+
+.step-section {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    align-items: center;
+    width: 90%;
+    padding: 5%;
+}
+
+.card {
+    margin: 2% auto;
+    border: #C0A080 1px solid;
+    border-top-left-radius:25px;
+    border-top-right-radius:25px;
+    border-bottom-right-radius:25px;
+    border-bottom-left-radius:25px;
+    padding: 2%;
+}
