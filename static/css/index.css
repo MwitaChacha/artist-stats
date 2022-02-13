@@ -57,3 +57,32 @@ span {
     border-bottom-left-radius:25px;
     padding: 2%;
 }
+
+.spotify-section {
+    background-color: #EEE6CE;
+}
+
+.spotify {
+    width: 30%;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.search-btn {
+    margin: 1%;
+    width: 35%;
+    background-color: #141824;
+}
+
+input[type="text"] {
+    width: 35%;
+    border-top-left-radius:25px;
+    border-top-right-radius:25px;
+    border-bottom-right-radius:25px;
+    border-bottom-left-radius:25px;
+    padding: 0.4rem;
+}
+
+::placeholder {
+    font-size: small;
+}
