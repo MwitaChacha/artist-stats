@@ -86,3 +86,14 @@ input[type="text"] {
 ::placeholder {
     font-size: small;
 }
+
+.spot-img {
+    object-fit: cover;
+    width: 30%;
+}
+
+.spotify-results {
+    padding: 2%;
+    margin-top: 2%;
+    align-items: center;
+}
