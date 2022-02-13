@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-family: 'Sen';
+}
+
+.intro {
+    background-color: #141824;
+    color: aliceblue;
+    height: 80vh;
+}
+
+.intro-img {
+    width: 50%;
+    height: 70%;
+    object-fit: cover;
+}
