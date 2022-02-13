@@ -9,10 +9,18 @@ body {
     background-color: #141824;
     color: aliceblue;
     height: 80vh;
+    align-items: center;
 }
 
 .intro-img {
-    width: 50%;
-    height: 70%;
+    width: 60%;
+    height: 25rem;
     object-fit: cover;
+    border-radius: 50%;
+    margin-top: 7%;
+}
+
+.text-intro {
+    padding: 7%;
+    margin-top: 7%;
 }
