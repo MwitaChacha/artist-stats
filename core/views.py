@@ -29,5 +29,19 @@ def index(request):
         url=sources[0]['url']
         
         context = {'url':url,'name':name,'uri':uri}
-        print(url)
+        
+    if 'stats' in request.GET:
+        stats = request.GET.get('stats')
+
+        url = "https://songstats.p.rapidapi.com/artists/stats"
+        
+        querystring = {"source":"all","spotify_artist_id":stats}
+        
+        headers = {
+            'x-rapidapi-host': "songstats.p.rapidapi.com",
+            'x-rapidapi-key': config("statsapi")
+            }
+        
+        responses = requests.request("GET", url, headers=headers, params=querystring).json()
+        print(responses)
     return render(request, 'index.html',context)

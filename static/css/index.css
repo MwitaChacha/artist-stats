@@ -71,7 +71,7 @@ span {
 .search-btn {
     margin: 1%;
     width: 45%;
-    background-color: #141824;
+    background-color: #655D8A;
 }
 
 input[type="text"] {
@@ -94,6 +94,20 @@ input[type="text"] {
 
 .spotify-results {
     padding: 2%;
-    margin-top: 2%;
+    margin-top: 8%;
     align-items: center;
+}
+
+.spot-section {
+    height: 55vh;
+}
+
+.stats-section {
+    background-color: #FDEBF7;
+}
+
+.stats-btn {
+    background-color: #694E4E;
+    margin: 1%;
+    width: 45%;
 }

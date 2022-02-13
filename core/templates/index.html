@@ -6,7 +6,7 @@
         <div class="col-lg-6 col-md-6 col-sm-6">
             <div class="container text-intro">
                 <h1>Music has the power to shape, <br> change and reinforce our <br>perceptions.</h1>
-                <p class="text-small p-2">Search your favourite musician's performance.</p>
+                <p class="small p-2">Search your favourite musician's performance and stats.</p>
                 <a href="#begin"><button class="btn btn-primary">Let's Begin</button></a>
             </div>
         </div>
@@ -68,7 +68,7 @@
         <h3>Almost there!<br> Now we search for an artist's Spotify ID.</h3>
     </div>
 
-<div class="row">
+<div class="row spot-section">
     <div class="col-lg-6 col-md-6 col-sm-12">
         <div class="container text-center">
             <img class="spotify " src="{% static "images/spotify.png" %}" alt="">
@@ -84,14 +84,32 @@
     <div class="col-lg-6 col-md-6 col-sm-12">
         <div class="container spotify-results text-center">
             <img class="spot-img" src="{{url}}" alt="">
-            <p>{{name}}</p>
+            <p class="pt-3">{{name}}</p>
             <p>{{uri}}</p>
         </div>
 
     </div>
 </div>
    
+</div>
 
+<div class="container-fluid stats-section">
+    <div class="container text-center">
+        <h3>Now that you have the ID you can search for the <br>artist's stats and performance.</h3>
+    </div>
 
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="search-container text-center">
+                <form method="get">
+                    <input id="spot" class="mx-3" type="text" name="stats" id="stats" placeholder="    Enter copied Spotify ID here"> <br>
+                    <button class="btn btn-primary  stats-btn" type="submit">Get Stats</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
