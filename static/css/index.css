@@ -63,19 +63,19 @@ span {
 }
 
 .spotify {
-    width: 30%;
+    width: 40%;
     align-items: center;
     margin: 0 auto;
 }
 
 .search-btn {
     margin: 1%;
-    width: 35%;
+    width: 45%;
     background-color: #141824;
 }
 
 input[type="text"] {
-    width: 35%;
+    width: 45%;
     border-top-left-radius:25px;
     border-top-right-radius:25px;
     border-bottom-right-radius:25px;

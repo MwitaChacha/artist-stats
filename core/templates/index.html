@@ -47,7 +47,7 @@
                 <div class="card-body">
                     <h5 class="card-title">STEP TWO</h5>
                     <p class="card-text">Search the Spotify ID of your artist</p>
-                    <a href="#" class="btn btn-primary">Here</a>
+                    <a href="#spot" class="btn btn-primary">Here</a>
                 </div>
             </div>
         </div>
@@ -68,17 +68,24 @@
         <h3>Almost there!<br> Now we search for an artist's Spotify ID.</h3>
     </div>
 
-
-    <div class="container text-center">
-        <img class="spotify " src="{% static "images/spotify.png" %}" alt="">
+<div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="container text-center">
+            <img class="spotify " src="{% static "images/spotify.png" %}" alt="">
+        </div>
+    
+        <div class="search-container text-center">
+            <form method="get">
+                <input id="spot" class="mx-3" type="text" name="artist" id="artist" placeholder="    Enter artist name"> <br>
+                <button class="btn btn-primary  search-btn" type="submit">Search</button>
+            </form>
+        </div>
     </div>
+    <div class="col-lg-6 col-md-6 col-sm-12">
 
-    <div class="search-container text-center">
-        <form method="get">
-            <input class="mx-3" type="text" name="artist" id="artist" placeholder="    Enter artist name"> <br>
-            <button class="btn btn-primary  search-btn" type="submit">Search</button>
-        </form>
     </div>
+</div>
+   
 
 
 </div>
