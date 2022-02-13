@@ -24,3 +24,18 @@ body {
     padding: 7%;
     margin-top: 7%;
 }
+
+.btn {
+    border-top-left-radius:25px;
+    border-top-right-radius:25px;
+    border-bottom-right-radius:25px;
+    border-bottom-left-radius:25px;
+    width: 40%;
+    background-color: #A1B57D;
+    border: #A1B57D;
+}
+
+span {
+    background-color: #C0A080;
+    padding: 1%;
+}
