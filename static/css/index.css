@@ -94,7 +94,7 @@ input[type="text"] {
 
 .spotify-results {
     padding: 2%;
-    margin-top: 8%;
+    margin-top: 4%;
     align-items: center;
 }
 
@@ -103,11 +103,31 @@ input[type="text"] {
 }
 
 .stats-section {
-    background-color: #FDEBF7;
+    background-color: #fff;
 }
 
 .stats-btn {
     background-color: #694E4E;
     margin: 1%;
-    width: 45%;
+    width: 35%;
+}
+
+.stats-section input[type="text"] {
+    width: 35%;
+    border-top-left-radius:25px;
+    border-top-right-radius:25px;
+    border-bottom-right-radius:25px;
+    border-bottom-left-radius:25px;
+    padding: 0.4rem;
+}
+
+.copy-space {
+    align-items: center;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.copy-btn {
+    margin: 2%;
+    width: 20%;
 }
