@@ -3,6 +3,7 @@ body {
     padding: 0;
     line-height: 1.6;
     font-family: 'Sen';
+    scroll-behavior: smooth;
 }
 
 .intro {
@@ -130,4 +131,33 @@ input[type="text"] {
 .copy-btn {
     margin: 2%;
     width: 20%;
+}
+
+.stat-img {
+    object-fit: cover;
+    width: 15%;
+    border-radius: 50%;
+    box-shadow: 0 10px 13px 0 rgba(0, 0, 0, 0.2), 0 11px 25px 0 rgba(0, 0, 0, 0.19);
+    margin: 2%;
+}
+
+.platform-section {
+    padding: 4%;
+}
+
+.spotify-span {
+    background-color: #91C483;
+    padding: 0.5%;
+    font-weight: bold;
+}
+.youtube-span {
+    background-color: #BB6464;
+    padding: 0.5%;
+    font-weight: bold;
+}
+.tiktok-span {
+    background-color: #19282F;
+    padding: 0.5%;
+    color: #fff;
+    font-weight: bold;
 }

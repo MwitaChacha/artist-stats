@@ -37,7 +37,7 @@
                 <div class="card-body">
                     <h5 class="card-title">STEP ONE</h5>
                     <p class="card-text">Get to know the name of the artist you want to search.</p>
-                    <p class="small">For example, Sauti Sol</p>
+                    <p class="small">For example, Burna Boy</p>
 
                 </div>
             </div>
@@ -56,7 +56,7 @@
                 <div class="card-body">
                     <h5 class="card-title">STEP THREE</h5>
                     <p class="card-text">Input that Spotify ID to search the stats of the artist</p>
-                    <a href="#" class="btn btn-primary">Here</a>
+                    <a href="#songstats" class="btn btn-primary">Here</a>
                 </div>
             </div>
         </div>
@@ -65,7 +65,7 @@
 
 <div class="container-fluid spotify-section">
     <div class="container text-center pt-5 mt-3">
-        <h3>Almost there!<br> Now we search for an artist's Spotify ID.</h3>
+        <h3>Almost there!<br> Now we search for an artist's <span>Spotify ID.</span></h3>
     </div>
 
     <div class="row spot-section">
@@ -88,10 +88,9 @@
                 <p class="pt-1">{{name}}</p>
                 {% if uri %}
                 <input class="form-control copy-space input-md text-center" type="text" value="{{uri}}" id="{{uri}}">
-                <button id="copy-text-btn" class="btn copy-btn btn-modal"
-                onclick="copyLink('{{uri}}')">Copy ID</button>
-            {% else %}
-            {% endif %}
+                <button id="copy-text-btn" class="btn copy-btn btn-modal" onclick="copyLink('{{uri}}')">Copy ID</button>
+                {% else %}
+                {% endif %}
             </div>
 
         </div>
@@ -113,9 +112,39 @@
             </form>
         </div>
     </div>
-
-    <p>{{name}}</p>
-    <p>{{total_streams}}</p>
+    <div class="container text-center" id="songstats">
+        <img class="stat-img" src="{{pic}}" alt="">
+        <h6>{{name}}</h6>
+    </div>
+    {% if total_streams %}
+    <div class="row platform-section">
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="container platform text-center">
+                <img class="spotify " src="{% static "images/spotify.png" %}" alt="">
+                <p>Total Streams:   <span class="spotify-span">{{total_streams}}</span> </p>
+                <p>Current Monthly Listenners:     <span class="spotify-span">{{monthly}}</span></p>
+                <p>Followers:    <span class="spotify-span">{{followers}}</span></p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="container platform text-center">
+                <img class="spotify " src="{% static "images/youtube.png" %}" alt="">
+                <p>Subscribers:     <span class="youtube-span">{{subs}}</span></p>
+                <p>Channel Views:     <span class="youtube-span">{{chaviews}}</span></p>
+                <p>Channel Likes:     <span class="youtube-span">{{vidlikes}}</span></p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="container platform text-center">
+                <img class="spotify " src="{% static "images/tiktok.png" %}" alt="">
+                <p>Total Videos:     <span class="tiktok-span">{{videos}}</span></p>
+                <p>Total Views:     <span class="tiktok-span">{{views}}</span></p>
+                <p>Total Followers:     <span class="tiktok-span">{{tikfollowers}}</span></p>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    {% endif %}
 </div>
 
 

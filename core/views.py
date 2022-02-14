@@ -42,7 +42,7 @@ def index(request):
         
         headers = {
             'x-rapidapi-host': "songstats.p.rapidapi.com",
-            # 'x-rapidapi-key': config("statsapi")
+            'x-rapidapi-key': config("statsapi")
             }
         
         responses = requests.request("GET", url, headers=headers, params=querystring).json()
@@ -52,11 +52,21 @@ def index(request):
         
         stats=responses['stats']
         source=stats[0]['source']
-        data=stats[0]['data']
-        total_streams=data['streams_total']
-        # spotify=source[0]['spotify']
-        # youtube=stats[4]['youtube']
-        context = {'name':name,'data':data,'total_streams':total_streams}
+        spotify=stats[0]['data']
+        total_streams=spotify['streams_total']
+        monthly=spotify['monthly_listeners_current']
+        followers=spotify['followers_total']
+
+        tiktok=stats[5]['data']
+        videos=tiktok['videos_total']
+        views=tiktok['views_total']
+        tikfollowers=tiktok['followers_total']
+
+        youtube=stats[4]['data']
+        subs=youtube['subscribers_total']
+        chaviews=youtube['channel_views_total']
+        vidlikes=youtube['video_likes_total']
+        context = {'name':name,'total_streams':total_streams,'pic':pic,'monthly':monthly,'followers':followers,'videos':videos,'views':views,'tikfollowers':tikfollowers,'subs':subs,'chaviews':chaviews,'vidlikes':vidlikes}
         print(name)
     return render(request, 'index.html',context)
 
